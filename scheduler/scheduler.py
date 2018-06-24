@@ -211,12 +211,12 @@ def crawler_start(usage, tasks):
                 if case.check(task, maps):
                     spiders.append(case.spider)
                     break
-            else:
-                # crawler_logger.warning('spider task {} is an invalid task, the allowed tasks are {}'.format(
-                #     task, list(maps.keys())))
-                pass
+                else:
+                    # crawler_logger.warning('spider task {} is an invalid task, the allowed tasks are {}'.format(
+                    #     task, list(maps.keys())))
+                    pass
     if not spiders:
-        #crawler_logger.warning('no spider starts up, please check your task input')
+        # crawler_logger.warning('no spider starts up, please check your task input')
         return
 
     settings = get_project_settings()
